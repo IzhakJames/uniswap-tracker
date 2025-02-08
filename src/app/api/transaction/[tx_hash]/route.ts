@@ -20,6 +20,7 @@ export async function GET(
       { status: 400 }
     );
   }
+
   //Used for testing purpose -> 0x8395927f2e5f97b2a31fd63063d12a51fa73438523305b5b30e7bec6afb26f48
 
   const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
