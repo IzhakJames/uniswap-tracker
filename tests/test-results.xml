@@ -1,8 +1,8 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="2.270311999999998">
-<testsuite name="api\transaction.spec.ts" timestamp="2025-02-09T12:59:54.481Z" hostname="chromium" tests="2" failures="0" skipped="0" time="2.075" errors="0">
-<testcase name="Transaction Fee API › Fetches transaction fee successfully" classname="api\transaction.spec.ts" time="1.114">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="2.0872300000000013">
+<testsuite name="api\transaction.spec.ts" timestamp="2025-02-09T13:08:37.899Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.94" errors="0">
+<testcase name="Transaction Fee API › Fetches transaction fee successfully" classname="api\transaction.spec.ts" time="1.004">
 </testcase>
-<testcase name="Transaction Fee API › Returns error for invalid hash" classname="api\transaction.spec.ts" time="0.961">
+<testcase name="Transaction Fee API › Returns error for invalid hash" classname="api\transaction.spec.ts" time="0.936">
 </testcase>
 </testsuite>
 </testsuites>

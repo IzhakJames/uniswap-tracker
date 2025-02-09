@@ -51,8 +51,9 @@ export async function GET(
     const feeInEth = (gasUsed * gasPrice) / 1e18;
 
     // Fetch ETH/USDT price from Binance
+    const BINANCE_API_URL = process.env.BINANCE_API_URL;
     const binanceRes = await axios.get(
-      "https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT"
+      `${BINANCE_API_URL}/price?symbol=ETHUSDT`
     );
     const ethPrice = parseFloat(binanceRes.data.price);
     const feeInUsdt = feeInEth * ethPrice;
