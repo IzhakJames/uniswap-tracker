@@ -57,14 +57,14 @@ We will implement:
 ### **1️⃣ Clone the Repository**
 
 ```sh
-git clone https://github.com/your-repo/uniswap-tracker.git
+git clone https://github.com/IzhakJames/uniswap-tracker.git
 cd uniswap-tracker
 ```
 
 ### **2️⃣ Install Dependencies**
 
 ```sh
-git clone https://github.com/your-repo/uniswap-tracker.git
+git clone https://github.com/IzhakJames/uniswap-tracker.git
 cd uniswap-tracker
 ```
 
