@@ -69,20 +69,20 @@
   },
   "suites": [
     {
-      "title": "api\\live-tracker.spec.ts",
-      "file": "api/live-tracker.spec.ts",
+      "title": "api\\eth-usdt-price.spec.ts",
+      "file": "api/eth-usdt-price.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Live Transaction Tracker API",
-          "file": "api/live-tracker.spec.ts",
+          "title": "ETH/USDT Price API",
+          "file": "api/eth-usdt-price.spec.ts",
           "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "Starts live tracking successfully",
+              "title": "Fetches the latest ETH/USDT price",
               "ok": true,
               "tags": [],
               "tests": [
@@ -94,22 +94,22 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 8,
                       "status": "passed",
-                      "duration": 1530,
+                      "duration": 194,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-09T17:00:04.688Z",
+                      "startTime": "2025-02-09T17:12:40.432Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "3d029ea511173fbd1cee-0d246d37c0c328226703",
-              "file": "api/live-tracker.spec.ts",
+              "id": "416f622346e588b93327-96dade95c6480b6ea3f7",
+              "file": "api/eth-usdt-price.spec.ts",
               "line": 6,
               "column": 7
             }
@@ -120,8 +120,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-09T17:00:03.437Z",
-    "duration": 2800.7879999997094,
+    "startTime": "2025-02-09T17:12:39.344Z",
+    "duration": 1300.303999999538,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
