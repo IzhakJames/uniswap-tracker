@@ -1,4 +1,3 @@
-// Get transaction fee API using transaction hash
 import { NextResponse } from "next/server";
 import axios from "axios";
 
@@ -11,7 +10,6 @@ export async function GET(
   req: Request,
   { params }: { params: Promise<{ tx_hash: string }> }
 ) {
-  // You can access params directly, no need to await
   const { tx_hash } = await params;
 
   if (!tx_hash) {
@@ -21,17 +19,28 @@ export async function GET(
     );
   }
 
-  //Used for testing purpose -> 0x8395927f2e5f97b2a31fd63063d12a51fa73438523305b5b30e7bec6afb26f48
-
   const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+  if (!ETHERSCAN_API_KEY) {
+    return NextResponse.json(
+      { error: "Missing ETHERSCAN_API_KEY in environment variables" },
+      { status: 500 }
+    );
+  }
+
   const etherscanUrl = `https://api.etherscan.io/api?module=proxy&action=eth_getTransactionByHash&txhash=${tx_hash}&apikey=${ETHERSCAN_API_KEY}`;
 
   try {
     const { data } = await axios.get(etherscanUrl);
+
+    if (data.message === "NOTOK") {
+      return NextResponse.json({ error: data.result }, { status: 403 });
+    }
+
+    // Check if transaction exists
     if (!data.result) {
       return NextResponse.json(
         { error: "Transaction not found" },
-        { status: 404 }
+        { status: 400 }
       );
     }
 
@@ -53,7 +62,9 @@ export async function GET(
       fee_in_eth: feeInEth,
       fee_in_usdt: feeInUsdt,
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.error("Etherscan API Error:", error.message);
+
     return NextResponse.json(
       { error: "Failed to fetch transaction data" },
       { status: 500 }
