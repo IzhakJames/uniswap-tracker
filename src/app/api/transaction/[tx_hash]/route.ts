@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import axios from "axios";
 
 interface TransactionData {
-  gas: string;
-  gasPrice: string;
+  gasUsed: string;
+  effectiveGasPrice: string;
 }
 
 export async function GET(
@@ -27,7 +27,7 @@ export async function GET(
     );
   }
 
-  const etherscanUrl = `https://api.etherscan.io/api?module=proxy&action=eth_getTransactionByHash&txhash=${tx_hash}&apikey=${ETHERSCAN_API_KEY}`;
+  const etherscanUrl = `https://api.etherscan.io/api?module=proxy&action=eth_getTransactionReceipt&txhash=${tx_hash}&apikey=${ETHERSCAN_API_KEY}`;
 
   try {
     const { data } = await axios.get(etherscanUrl);
@@ -46,14 +46,14 @@ export async function GET(
 
     // Extract gas used and gas price
     const transaction: TransactionData = data.result;
-    const gasUsed = parseInt(transaction.gas, 16);
-    const gasPrice = parseInt(transaction.gasPrice, 16);
+    const gasUsed = parseInt(transaction.gasUsed, 16);
+    const gasPrice = parseInt(transaction.effectiveGasPrice, 16);
     const feeInEth = (gasUsed * gasPrice) / 1e18;
 
     // Fetch ETH/USDT price from Binance
     const BINANCE_API_URL = process.env.BINANCE_API_URL;
     const binanceRes = await axios.get(
-      `${BINANCE_API_URL}/price?symbol=ETHUSDT`
+      `${BINANCE_API_URL}/price?symbol=ETHUSDC`
     );
     const ethPrice = parseFloat(binanceRes.data.price);
     const feeInUsdt = feeInEth * ethPrice;

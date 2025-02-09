@@ -74,8 +74,8 @@ export async function GET(req: Request) {
 
     // Compute fees in USDT
     const transactionsWithFees = filteredTransactions.map((txn) => {
-      const gasUsed = parseInt(txn.gasUsed, 16);
-      const gasPrice = parseInt(txn.gasPrice, 16);
+      const gasUsed = parseInt(txn.gasUsed);
+      const gasPrice = parseInt(txn.gasPrice);
       const feeInEth = (gasUsed * gasPrice) / 1e18;
       const feeInUsdt = feeInEth * ethPrice;
 

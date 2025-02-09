@@ -1,8 +1,14 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="2.577549000000581">
-<testsuite name="api\transaction-history.spec.ts" timestamp="2025-02-09T14:52:43.176Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.399" errors="0">
-<testcase name="Fetch Historical Transactions › Fetches transactions successfully with dates" classname="api\transaction-history.spec.ts" time="1.274">
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="1.9750619999999999">
+<testsuite name="api\transaction-history.spec.ts" timestamp="2025-02-09T15:46:02.752Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.521" errors="0">
+<testcase name="Fetch Historical Transactions › Fetches transactions successfully with dates" classname="api\transaction-history.spec.ts" time="1.355">
 </testcase>
-<testcase name="Fetch Historical Transactions › Returns error when start_time or end_time is missing" classname="api\transaction-history.spec.ts" time="0.125">
+<testcase name="Fetch Historical Transactions › Returns error when start_time or end_time is missing" classname="api\transaction-history.spec.ts" time="0.166">
+</testcase>
+</testsuite>
+<testsuite name="api\transaction.spec.ts" timestamp="2025-02-09T15:46:02.752Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.972" errors="0">
+<testcase name="Transaction Fee API › Fetches transaction fee successfully" classname="api\transaction.spec.ts" time="1.096">
+</testcase>
+<testcase name="Transaction Fee API › Returns error for invalid hash" classname="api\transaction.spec.ts" time="0.876">
 </testcase>
 </testsuite>
 </testsuites>

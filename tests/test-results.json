@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -62,7 +62,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.50.1",
     "workers": 6,
     "webServer": null
@@ -94,14 +94,14 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "status": "passed",
-                      "duration": 1274,
+                      "duration": 1355,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-09T14:52:43.708Z",
+                      "startTime": "2025-02-09T15:46:03.331Z",
                       "attachments": []
                     }
                   ],
@@ -126,14 +126,14 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 125,
+                      "duration": 166,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-09T14:52:43.705Z",
+                      "startTime": "2025-02-09T15:46:03.334Z",
                       "attachments": []
                     }
                   ],
@@ -148,13 +148,94 @@
           ]
         }
       ]
+    },
+    {
+      "title": "api\\transaction.spec.ts",
+      "file": "api/transaction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Transaction Fee API",
+          "file": "api/transaction.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Fetches transaction fee successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 1096,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-09T15:46:03.326Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f19f64c4b53ced4bf6a4-ca0eb3bfad0eb3b4d012",
+              "file": "api/transaction.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Returns error for invalid hash",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 876,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-09T15:46:03.327Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f19f64c4b53ced4bf6a4-e8b6ac6c5eac06332ba9",
+              "file": "api/transaction.spec.ts",
+              "line": 21,
+              "column": 7
+            }
+          ]
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-09T14:52:42.431Z",
-    "duration": 2577.549000000581,
-    "expected": 2,
+    "startTime": "2025-02-09T15:46:02.735Z",
+    "duration": 1975.062,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
