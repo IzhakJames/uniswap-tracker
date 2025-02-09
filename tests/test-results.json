@@ -69,20 +69,20 @@
   },
   "suites": [
     {
-      "title": "api\\transaction.spec.ts",
-      "file": "api/transaction.spec.ts",
+      "title": "api\\transaction-history.spec.ts",
+      "file": "api/transaction-history.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Transaction Fee API",
-          "file": "api/transaction.spec.ts",
-          "line": 5,
+          "title": "Fetch Historical Transactions",
+          "file": "api/transaction-history.spec.ts",
+          "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "Fetches transaction fee successfully",
+              "title": "Fetches transactions successfully with dates",
               "ok": true,
               "tags": [],
               "tests": [
@@ -94,27 +94,27 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 5,
                       "status": "passed",
-                      "duration": 1004,
+                      "duration": 1274,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-09T13:08:38.419Z",
+                      "startTime": "2025-02-09T14:52:43.708Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "f19f64c4b53ced4bf6a4-ca0eb3bfad0eb3b4d012",
-              "file": "api/transaction.spec.ts",
-              "line": 10,
+              "id": "f066608b22c3fe34d1fc-8a2d70b01fd6ad9be2b6",
+              "file": "api/transaction-history.spec.ts",
+              "line": 6,
               "column": 7
             },
             {
-              "title": "Returns error for invalid hash",
+              "title": "Returns error when start_time or end_time is missing",
               "ok": true,
               "tags": [],
               "tests": [
@@ -126,22 +126,22 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 6,
                       "status": "passed",
-                      "duration": 936,
+                      "duration": 125,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-09T13:08:38.424Z",
+                      "startTime": "2025-02-09T14:52:43.705Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "f19f64c4b53ced4bf6a4-e8b6ac6c5eac06332ba9",
-              "file": "api/transaction.spec.ts",
+              "id": "f066608b22c3fe34d1fc-d8b029f231331adda477",
+              "file": "api/transaction-history.spec.ts",
               "line": 21,
               "column": 7
             }
@@ -152,8 +152,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-09T13:08:37.358Z",
-    "duration": 2087.2300000000014,
+    "startTime": "2025-02-09T14:52:42.431Z",
+    "duration": 2577.549000000581,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,
