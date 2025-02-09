@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -62,59 +62,27 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "patch",
+    "updateSourceMethod": "3way",
     "version": "1.50.1",
     "workers": 6,
     "webServer": null
   },
   "suites": [
     {
-      "title": "api\\transaction-history.spec.ts",
-      "file": "api/transaction-history.spec.ts",
+      "title": "api\\live-tracker.spec.ts",
+      "file": "api/live-tracker.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Fetch Historical Transactions",
-          "file": "api/transaction-history.spec.ts",
+          "title": "Live Transaction Tracker API",
+          "file": "api/live-tracker.spec.ts",
           "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "Fetches transactions successfully with dates",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 1355,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-09T15:46:03.331Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "f066608b22c3fe34d1fc-8a2d70b01fd6ad9be2b6",
-              "file": "api/transaction-history.spec.ts",
-              "line": 6,
-              "column": 7
-            },
-            {
-              "title": "Returns error when start_time or end_time is missing",
+              "title": "Starts live tracking successfully",
               "ok": true,
               "tags": [],
               "tests": [
@@ -128,102 +96,21 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 166,
+                      "duration": 1530,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-09T15:46:03.334Z",
+                      "startTime": "2025-02-09T17:00:04.688Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "f066608b22c3fe34d1fc-d8b029f231331adda477",
-              "file": "api/transaction-history.spec.ts",
-              "line": 21,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "api\\transaction.spec.ts",
-      "file": "api/transaction.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Transaction Fee API",
-          "file": "api/transaction.spec.ts",
-          "line": 5,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Fetches transaction fee successfully",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 1096,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-09T15:46:03.326Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "f19f64c4b53ced4bf6a4-ca0eb3bfad0eb3b4d012",
-              "file": "api/transaction.spec.ts",
-              "line": 10,
-              "column": 7
-            },
-            {
-              "title": "Returns error for invalid hash",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 876,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-09T15:46:03.327Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "f19f64c4b53ced4bf6a4-e8b6ac6c5eac06332ba9",
-              "file": "api/transaction.spec.ts",
-              "line": 21,
+              "id": "3d029ea511173fbd1cee-0d246d37c0c328226703",
+              "file": "api/live-tracker.spec.ts",
+              "line": 6,
               "column": 7
             }
           ]
@@ -233,9 +120,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-09T15:46:02.735Z",
-    "duration": 1975.062,
-    "expected": 4,
+    "startTime": "2025-02-09T17:00:03.437Z",
+    "duration": 2800.7879999997094,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
