@@ -9,13 +9,15 @@ if (!INFURA_WS_URL) {
   throw new Error("Missing INFURA_WS_URL in environment variables");
 }
 
-const web3 = new Web3(new Web3.providers.WebsocketProvider(INFURA_WS_URL));
+export const web3 = new Web3(
+  new Web3.providers.WebsocketProvider(INFURA_WS_URL)
+);
 
 export async function GET() {
   try {
     console.log("Listening for real-time Uniswap transactions...");
 
-    const subscription = web3.eth.subscribe(
+    web3.eth.subscribe(
       "pendingTransactions",
       async (error: Error | null, txHash: string | undefined) => {
         if (error) {
