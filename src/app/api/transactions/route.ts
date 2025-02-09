@@ -42,7 +42,7 @@ export async function GET(req: Request) {
 
     // Fetch historical transactions from Etherscan
     const UNISWAP_POOL_ADDRESS = "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640"; // Uniswap V3 USDC/ETH Pool
-    const etherscanUrl = `https://api.etherscan.io/api?module=account&action=txlist&address=${UNISWAP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=desc&apikey=${ETHERSCAN_API_KEY}`;
+    const etherscanUrl = `https://api.etherscan.io/api?module=account&action=tokentx&address=${UNISWAP_POOL_ADDRESS}&startblock=0&endblock=99999999&sort=desc&apikey=${ETHERSCAN_API_KEY}`;
 
     const { data } = await axios.get(etherscanUrl);
     if (data.message !== "OK" || !data.result) {
