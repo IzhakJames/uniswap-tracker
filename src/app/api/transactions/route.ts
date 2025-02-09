@@ -62,7 +62,7 @@ export async function GET(req: Request) {
     if (filteredTransactions.length === 0) {
       return NextResponse.json(
         { message: "No transactions found in the given time range" },
-        { status: 404 }
+        { status: 204 }
       );
     }
 
